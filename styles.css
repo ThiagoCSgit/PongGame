@@ -23,7 +23,7 @@ body{
     background-color: var(--foreground-color);
     top: calc(var(--position) * 1vh);
     transform: translateY(-50%);
-    width: 1vh;
+    width: 1.5vh;
     height: 10vh;
 }
 
@@ -33,6 +33,10 @@ body{
 
 .paddle.right{
     right: 1vw;
+}
+
+#player-score, #computer-score{
+    text-align: center;
 }
 
 .ball{
@@ -45,8 +49,8 @@ body{
     top: calc(var(--y) * 1vh);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    width: 2.5vh;
-    height: 2.5vh;
+    width: 3vh;
+    height: 3vh;
 }
 
 .score{
@@ -67,5 +71,12 @@ body{
 
 .score > :first-child{
     text-align: right;
-    border-right: .5vh solid var(--foreground-color);
+}
+
+.border{
+    flex-grow: 0;
+    height: 100vh;
+    background-color: #ccc;
+    padding: 5px;
+    margin: 0px;
 }
