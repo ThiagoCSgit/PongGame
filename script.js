@@ -8,6 +8,8 @@ const playerPaddle = new Paddle(document.getElementById("player-paddle"))
 const computerPaddle = new Paddle(document.getElementById("computer-paddle"))
 const playerScoreElem = document.getElementById("player-score")
 const computerScoreElem = document.getElementById("computer-score")
+const POINT_SOUND = new Audio()
+POINT_SOUND.src = 'pointSound.wav'
 
 let lastTime
 
@@ -35,9 +37,11 @@ function isLose(){
 function handleLose(){
     const rect = ball.rect()
     if(rect.right >= window.innerWidth){
+        POINT_SOUND.play()
         playerScoreElem.textContent = parseInt(playerScoreElem.textContent) + 1
     }
     else{
+        POINT_SOUND.play()
         computerScoreElem.textContent = parseInt(computerScoreElem.textContent) + 1
     }
     ball.reset()

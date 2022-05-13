@@ -1,5 +1,7 @@
 const INITIAL_SPEED = 0.025
 const SPEED_INCREASE = 0.000005
+const COLLISION_SOUND = new Audio()
+COLLISION_SOUND.src = 'hitSound.wav'
 
 export default class Ball{
     constructor(ballElem){
@@ -57,10 +59,10 @@ function randomNumerBetween(min, max){
 }
 
 function isCollision(rect1, rect2){
-    return (
-    rect1.left <= rect2.right && 
-    rect1.right >= rect2.left && 
-    rect1.top <= rect2.bottom && 
-    rect1.bottom >= rect2.top
-    )
+    if(rect1.left <= rect2.right && rect1.right >= rect2.left && rect1.top <= rect2.bottom && rect1.bottom >= rect2.top) 
+    {
+        COLLISION_SOUND.play()
+        return true
+    }
+    return false
 }
