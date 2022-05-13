@@ -46,9 +46,11 @@ export default class Ball{
         this.speed += SPEED_INCREASE * delta
         const rect = this.rect()
         if(rect.bottom >= window.innerHeight || rect.top <= 0){
+            COLLISION_SOUND.play()
             this.direction.y *= -1
         }
         if(paddleRects.some(r => isCollision(r, rect))){
+            COLLISION_SOUND.play()
             this.direction.x *= -1
         }
     }
