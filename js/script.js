@@ -9,9 +9,17 @@ const computerPaddle = new Paddle(document.getElementById("computer-paddle"))
 const playerScoreElem = document.getElementById("player-score")
 const computerScoreElem = document.getElementById("computer-score")
 const POINT_SOUND = new Audio()
-POINT_SOUND.src = 'pointSound.wav'
+POINT_SOUND.src = './sounds/pointSound.wav'
 
 let lastTime
+
+document.onload = autoClick()
+
+function autoClick(){
+    console.log('autoclick')
+    document.getElementById('body').click()
+    // document.dispatchEvent(new KeyboardEvent('keypress'))
+}
 
 function update(time){
     if(lastTime != null){
