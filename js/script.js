@@ -13,13 +13,6 @@ POINT_SOUND.src = './sounds/pointSound.wav'
 
 let lastTime
 
-document.onload = autoClick()
-
-function autoClick(){
-    console.log('autoclick')
-    document.getElementById('body').click()
-    // document.dispatchEvent(new KeyboardEvent('keypress'))
-}
 
 function update(time){
     if(lastTime != null){
@@ -60,4 +53,7 @@ document.addEventListener("mousemove", e => {
     playerPaddle.position = (e.y / window.innerHeight) * 100
 })
 
-window.requestAnimationFrame(update)
+export function startGame(){
+    window.requestAnimationFrame(update)
+    console.log('opa')
+}
