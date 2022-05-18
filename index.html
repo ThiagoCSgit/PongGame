@@ -9,20 +9,24 @@
     <script src="./js/script.js" type="module"></script>
     <script type="module">
         import {startGame} from './js/script.js'
-        function start(){
+        document.getElementById('start-button').addEventListener('click', () => {
             startGame()
-        }
+            document.getElementById('game').classList.toggle('unfocused')
+            document.getElementById('start-button').style.display = 'none'
+        })
     </script>
 </head>
 <body id="body">
-    <button type="button" onclick="startGame" class="start-button">INICIAR</button>
-    <div class="score">
-        <div id="player-score">0</div>
-        <div class="border"></div>
-        <div id="computer-score">0</div>
+    <button type="button" id="start-button" class="button">INICIAR</button>
+    <div id="game" class="unfocused">
+        <div class="score">
+            <div id="player-score">0</div>
+            <div class="border"></div>
+            <div id="computer-score">0</div>
+        </div>
+        <div id="ball" class="ball"></div>
+        <div class="paddle left" id="player-paddle"></div>
+        <div class="paddle right" id="computer-paddle"></div>
     </div>
-    <div id="ball" class="ball"></div>
-    <div class="paddle left" id="player-paddle"></div>
-    <div class="paddle right" id="computer-paddle"></div>
 </body>
 </html>

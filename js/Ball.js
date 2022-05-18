@@ -48,7 +48,6 @@ export default class Ball{
         if(rect.bottom >= window.innerHeight || rect.top <= 0){
             
             COLLISION_SOUND.play()
-            console.log('colisão')
             this.direction.y *= -1
         }
         if(paddleRects.some(r => isCollision(r, rect))){

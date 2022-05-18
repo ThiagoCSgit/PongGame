@@ -17,7 +17,11 @@ body{
     overflow: hidden;
 }
 
-.start-button{
+.unfocused{
+    filter: blur(10px);
+}
+
+.button{
     font-family: lato;
     position: absolute;
     top: 50%;

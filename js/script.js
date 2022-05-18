@@ -46,11 +46,10 @@ function handleLose(){
     computerPaddle.reset()
 }
 
-document.addEventListener("mousemove", e => {
-    playerPaddle.position = (e.y / window.innerHeight) * 100
-})
 
 export function startGame(){
+    document.addEventListener("mousemove", e => {
+        playerPaddle.position = (e.y / window.innerHeight) * 100
+    })
     window.requestAnimationFrame(update)
-    console.log('opa')
 }
