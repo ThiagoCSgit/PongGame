@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Nunito&display=swap');
+
 *, *::after, *::before{
     box-sizing: border-box;
 }
@@ -16,7 +18,7 @@ body{
 }
 
 .start-button{
-    font-family: cursive;
+    font-family: lato;
     position: absolute;
     top: 50%;
     left: 50%;
