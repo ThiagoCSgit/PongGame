@@ -1,5 +1,3 @@
-// Update Loop
-
 import Ball from './Ball.js'
 import Paddle from './Paddle.js'
 
@@ -12,7 +10,6 @@ const POINT_SOUND = new Audio()
 POINT_SOUND.src = './sounds/pointSound.wav'
 
 let lastTime
-
 
 function update(time){
     if(lastTime != null){
