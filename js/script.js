@@ -48,7 +48,7 @@ function handleLose(){
 
 
 export function startGame(){
-    document.addEventListener("mousemove", e => {
+    document.addEventListener("mousemove", "touchmove", e => {
         playerPaddle.position = (e.y / window.innerHeight) * 100
     })
     window.requestAnimationFrame(update)
