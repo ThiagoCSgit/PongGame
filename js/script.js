@@ -52,7 +52,7 @@ export function startGame(){
         playerPaddle.position = (e.y / window.innerHeight) * 100
     })
     document.addEventListener("touchmove", e => {
-        playerPaddle.position = (e.y / window.innerHeight) * 100
+        playerPaddle.position = (e.y / window.innerHeight)
     })
     window.requestAnimationFrame(update)
 }
